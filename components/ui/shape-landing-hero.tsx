@@ -4,7 +4,8 @@ import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { Heart } from "lucide-react";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 
 function ElegantShape({
 	className,
@@ -205,7 +206,7 @@ function HeroGeometric({
 				/>
 			</div>
 
-			<div className="relative z-10 container mx-auto px-4 md:px-6">
+			<div className="relative z-10 container mx-auto px-4 md:px-6 pt-20 md:pt-32">
 				<div className="max-w-3xl mx-auto text-center">
 					<motion.div
 						custom={0}
@@ -242,6 +243,18 @@ function HeroGeometric({
 						<p className="text-base sm:text-lg md:text-xl text-white/40 mb-8 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
 							Your own personal matchmaking team to help you find love ASAP.
 						</p>
+						<div className="flex flex-col gap-2 max-w-md mx-auto">
+							<Input
+								type="email"
+								placeholder="Enter your email"
+								className="h-12 bg-gray-950/50 border-gray-800"
+							/>
+							<Button
+								className="h-10 w-[25%] mx-auto mt-2 bg-white text-black font-semibold hover:bg-[linear-gradient(90deg,#C6FFDD,#FBD786,#f7797d)] hover:text-white transition-all duration-300 rounded-full"
+							>
+								Set Me Up
+							</Button>
+						</div>
 					</motion.div>
 				</div>
 			</div>
